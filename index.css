@@ -1,0 +1,261 @@
+:root{
+    --color-principal:#ff7979;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 62px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+}
+.contenedor{
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 12px;
+}
+.cabecera{
+    padding: 8px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 2;
+}
+.avatar{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+.mi-nombre{
+    font-weight: 600;
+    color:gray;
+}
+.mi-info{
+    display: flex;
+    gap:8px;
+    align-items: center;
+}
+.navegacion{
+    display: flex;
+    gap: 16px;
+    /*  ubica de manera horizontal */
+    justify-content: space-between;
+    /*  ubica de manera vertical */
+    align-items: center;
+}
+.navegacion-pagina > ul{
+    display: flex;
+    list-style: none;
+    gap: 16px;
+}
+.navegacion-pagina a{
+    text-decoration: none;
+    font-weight: 600;
+    color:gray;
+}
+.navegacion-pagina a:hover{
+    color: var(--color-principal);
+}
+/* Creacion del baner */
+.baner{
+    padding: 24px 0;
+    display: flex;
+    justify-content: center;
+    gap: 16px 64px;
+    align-items: center;
+}
+.img-baner > img{
+    width: 160px;
+}
+.descripcion-baner > h1{
+    font-size: 36px;
+    font-weight: 900;
+}
+.saludar-descripcion-baner{
+    width: 24px;
+}
+/* SOBRE MI */
+.titulo-descripcion{
+    padding: 24px 0;
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+}
+.titulo-descripcion::after{
+    content: '';
+    display: block;
+    width: 36px;
+    height: 6px;
+    background-color: var(--color-principal);
+    margin: auto;
+    margin-top: 4px;
+}
+.texto-centrado{
+    text-align: center;
+}
+.sobre-mi{
+    position: relative;
+}
+.centenido-sobre-mi{
+    margin-bottom: 28px;
+}
+.subtitulo-descripcion{
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+.texto-justificado{
+    text-align: justify;
+}
+.mi-experiencia-sobre-mi{
+    width: 50%;
+}
+.mas-sobre-mi{
+    display: flex;
+    gap: 20px;
+}
+.mis-habilidades-sobre-mi > ul {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.mis-habilidades-sobre-mi > ul > li{
+    background-color: var(--color-principal);
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+/* MIS TRABAJOS CON CSS GRID */
+.mis-trabajos{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 24px;
+    align-items: center;
+}
+.contenido-mis-trabajos{
+    grid-column: 1/13;
+}
+.mi-trabajo-uno{
+    grid-column: 1/7;
+    grid-row: 2/4;
+}
+.mi-trabajo-dos{
+    grid-column: 7/13;
+}
+.mi-trabajo-tres{
+    grid-column: 7/13;
+}
+.img-trabajo{
+    width: 160px;
+    height: 160px;
+    /* object-fit: contain; */
+    padding: 12px;
+    border: 4px solid var(--color-principal);
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+}
+/* ESTILOS PARA CONTACTO */
+.cuadros-texto{
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #a8a8a8;
+    border-radius: 8px;
+}
+.grupo-cuadro-texto{
+    margin-bottom: 12px;
+}
+.formulario-sm{
+    width: 100%;
+    max-width: 498px;
+    margin: 12px auto;
+}
+.descripcion-cuadros-texto{
+    color: var(--color-principal);
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.cuadros-texto:focus{
+    border-color: var(--color-principal);
+}
+.boton-principal{
+    padding: 12px 24px;
+    outline: none;
+    background-color: var(--color-principal);
+    color: white;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    transition: all 0.2s ease-in-out;
+}
+.boton-principal:hover{
+    color: var(--color-principal);
+    border: 1px solid var(--color-principal);
+    background-color: white;
+}
+footer{
+    background-color: #000049e0;
+    color: white;
+    padding: 24px 12px;
+}
+.desarrollador{
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    display: block;
+}
+footer ul {
+    margin: 20px 0;
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+footer ul li a{
+    color: white;
+    text-decoration: none;
+}
+/* Aplicando media querys */
+
+@media screen and (max-width: 800px){
+    .mi-trabajo-uno{
+        grid-column: 1/13;
+    }
+    .mi-trabajo-dos{
+        grid-column: 1/13;
+    }
+    .mi-trabajo-tres{
+        grid-column: 1/13;
+    }
+    .mas-sobre-mi{
+        flex-direction: column;
+    }
+    .mi-experiencia-sobre-mi{
+        width: 100%;
+    }
+    .baner{
+        flex-direction: column;
+        padding: 12px 24px;
+    }
+}
+@media screen and (max-width: 600px){
+    .navegacion{
+        flex-direction: column;
+    }
+    html{
+        scroll-padding-top: 102px;
+    }
+}
